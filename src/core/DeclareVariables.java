@@ -16,16 +16,15 @@ public class DeclareVariables {
     }
 
     public static String declareVariables(){
+        float total = cupsOfCoffee * costOfCoffee;
         String response = "";
 
         response = "Dear " + customerName + ", thank you for supporting our business!"+"\n" +
-                   "Cups of coffee bought: " +  cupsOfCoffee +"." +"\n"+
-                   "Cost of " +  cupsOfCoffee + " cup of coffee: " + "$"+ costOfCoffee +"." + "\n" +
-                   "Your total is: " + "$"+ costOfCoffee + "."+ "\n" +
-                   "Tip is included? " + tip + ".";
+                "Cups of coffee bought: " +  cupsOfCoffee +"." +"\n"+
+                "Cost of " +  cupsOfCoffee + " cup of coffee: " + "$"+ costOfCoffee +"." + "\n" +
+                "Your total is: " + "$"+ total + "."+ "\n" +
+                "Tip is included? " + tip + ".";
 
         return response;
     }
 }
-
-

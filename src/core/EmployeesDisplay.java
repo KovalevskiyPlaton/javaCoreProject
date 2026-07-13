@@ -1,12 +1,12 @@
 package core;
 
 public class EmployeesDisplay {
-    static void main(String[] args) {
+    public static void main(String[] args) {
         Employees male = new Employees("Александр", "директор по маркетингу");
         Employees female = new Employees("Наталья", "заместитель директора по маркетингу");
         String resultPhrase = "Вчера наша компания пополнилась новыми сотрудниками в количестве: " +
-                Employees.getEmloyeesNewCount() +  " человек(а)" + "." + "\n" + male.getName() + " нанят на должность "
-                + male.getRole()+ "," + " a " + female.getName() + " нанята в должности: " + female.getRole() + ".";
+                Employees.getEmloyeesNewCount() + " человек(а)" + "." + "\n" + male.getName() + " нанят на должность "
+                + male.getRole() + "," + " a " + female.getName() + " нанята в должности: " + female.getRole() + ".";
 
         System.out.println(resultPhrase);
         Employees.clearCount();
@@ -17,32 +17,29 @@ public class EmployeesDisplay {
         private String role;
         private static int count;
 
-        public Employees(String name, String role)    {
+        public Employees(String name, String role) {
             this.name = name;
             this.role = role;
             count++;
-            System.out.println("Создан новый объект, имя: " + name + ",сотрудник принят на должность: " + role);
         }
 
-        public String getName(){
+        public String getName() {
             return name;
         }
 
-        public String getRole(){
+        public String getRole() {
             return role;
         }
 
-        public static int getEmloyeesNewCount(){
+        public static int getEmloyeesNewCount() {
             return count;
         }
 
-        /**Метод неоходимо вызывать каждый раз после объвления новых сотрудников*/
-        public static int clearCount(){
+        /**
+         * Метод неоходимо вызывать каждый раз после объвления новых сотрудников
+         */
+        public static void clearCount() {
             count = 0;
-            return count;
         }
-
     }
 }
-
-
