@@ -2,7 +2,7 @@ package core;
 
 public class IntCalculations0 {
 
-    static void main() {
+    public static void main(String[] args) {
         System.out.println((int)getDataTypesIntA());
         System.out.println((int)getDataTypesIntB());
         System.out.println(getDataTypesDoubleA());

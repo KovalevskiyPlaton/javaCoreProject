@@ -6,7 +6,7 @@ public class DeclareVariables {
     public static  float  costOfCoffee;
     public static boolean  tip;
 
-    static void main() {
+    public static void main(String[] args) {
         customerName = "Sasha";
         cupsOfCoffee = 1;
         costOfCoffee = 99.9f;
@@ -16,16 +16,13 @@ public class DeclareVariables {
     }
 
     public static String declareVariables(){
-        String response = "";
+        float total = cupsOfCoffee * costOfCoffee;;
+        String response = "Dear %s, thank you for supporting our business!\n" +
+                "Cups of coffee bought: %s.\n" +
+                "Cost of %s cup of coffee: $%s.\n" +
+                "Your total is: $%s.\n" +
+                "Tip is included? %s.";
 
-        response = "Dear " + customerName + ", thank you for supporting our business!"+"\n" +
-                   "Cups of coffee bought: " +  cupsOfCoffee +"." +"\n"+
-                   "Cost of " +  cupsOfCoffee + " cup of coffee: " + "$"+ costOfCoffee +"." + "\n" +
-                   "Your total is: " + "$"+ costOfCoffee + "."+ "\n" +
-                   "Tip is included? " + tip + ".";
-
-        return response;
+        return String.format(response,customerName, cupsOfCoffee, cupsOfCoffee, costOfCoffee, total, tip);
     }
 }
-
-

@@ -1,7 +1,7 @@
 package core;
 
 public class EmployeesDisplay {
-    static void main(String[] args) {
+    public static void main(String[] args) {
         Employees male = new Employees("Александр", "директор по маркетингу");
         Employees female = new Employees("Наталья", "заместитель директора по маркетингу");
         String resultPhrase = "Вчера наша компания пополнилась новыми сотрудниками в количестве: " +
@@ -21,7 +21,6 @@ public class EmployeesDisplay {
             this.name = name;
             this.role = role;
             count++;
-            System.out.println("Создан новый объект, имя: " + name + ",сотрудник принят на должность: " + role);
         }
 
         public String getName(){
@@ -37,12 +36,8 @@ public class EmployeesDisplay {
         }
 
         /**Метод неоходимо вызывать каждый раз после объвления новых сотрудников*/
-        public static int clearCount(){
+        public static void clearCount(){
             count = 0;
-            return count;
         }
-
     }
 }
-
-
