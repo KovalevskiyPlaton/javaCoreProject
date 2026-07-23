@@ -4,11 +4,14 @@ public class EmployeesDisplay {
     public static void main(String[] args) {
         Employees male = new Employees("Александр", "директор по маркетингу");
         Employees female = new Employees("Наталья", "заместитель директора по маркетингу");
-        String resultPhrase = "Вчера наша компания пополнилась новыми сотрудниками в количестве: " +
-                Employees.getEmloyeesNewCount() +  " человек(а)" + "." + "\n" + male.getName() + " нанят на должность "
-                + male.getRole()+ "," + " a " + female.getName() + " нанята в должности: " + female.getRole() + ".";
-
-        System.out.println(resultPhrase);
+        final String resultString = String.format("Вчера наша компания пополнилась новыми сотрудниками " +
+                            "в количестве: %s человек(а).\n%s " + "нанят на должность %s, a %s нанята в должности: %s.",
+                    Employees.getEmloyeesNewCount(),
+                    male.getName(),
+                    male.getRole(),
+                    female.getName(),
+                    female.getRole());
+        System.out.println(resultString);
         Employees.clearCount();
     }
 

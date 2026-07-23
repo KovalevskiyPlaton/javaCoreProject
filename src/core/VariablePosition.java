@@ -1,6 +1,6 @@
 package core;
 
-public static class VariablePosition {
+public  static class VariablePosition {
     /*
         Данный класс не скомпилируется т.к. класс верхнего уровня
         не может иметь модификатор static. Модификатор static могут иметь вложенные классы.
